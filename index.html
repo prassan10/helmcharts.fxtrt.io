@@ -1,1 +1,73 @@
-TEST
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HACKED</title>
+  <style>
+    :root {
+      --bg: #000;
+      --green: #18ff62;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: var(--bg);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    .wrap {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+    h1 {
+      color: var(--green);
+      font-size: clamp(4rem, 14vw, 18rem);
+      letter-spacing: 0.1em;
+      text-shadow: 0 0 8px rgba(24,255,98,.75), 0 0 22px rgba(24,255,98,.35);
+      margin: 0;
+      user-select: none;
+      animation: flicker 2.4s infinite steps(1);
+    }
+    @keyframes flicker {
+      0%, 4%, 6%, 100% { opacity: 1; }
+      5% { opacity: .7; }
+      35% { opacity: .95; }
+      36% { opacity: .6; }
+      37% { opacity: 1; }
+      63% { opacity: .9; }
+      64% { opacity: .65; }
+      65% { opacity: 1; }
+    }
+    .gif-holder {
+      position: fixed;
+      left: 50%;
+      bottom: 16px;
+      transform: translateX(-50%);
+      max-width: min(90vw, 600px);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      pointer-events: none; /* let clicks pass through if overlaid */
+    }
+    .gif-holder img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 0 8px rgba(24,255,98,.35));
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" aria-label="Center text">
+    <h1>HACKED</h1>
+  </div>
+
+  <!-- Replace the src below with your GIF URL or file path -->
+  <div class="gif-holder" aria-label="Bottom GIF">
+    <img src="REPLACE_WITH_YOUR_GIF_URL.gif" alt="Animated graphic" />
+  </div>
+</body>
+</html>
